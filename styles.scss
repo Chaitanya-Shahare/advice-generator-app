@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+$small: 430px;
+$medium: 900px;
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background-color: hsl(218, 23%, 16%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Manrope', sans-serif;
+	@media screen and (max-width: $small) {
+		height: 70vh;		
+	}
+}
+
+.card {
+	min-width: 300px;
+	max-width: 350px;
+	min-height: 200px;
+	background-color: hsl(217, 19%, 24%);
+	color: hsl(193, 38%, 66%);
+	padding: 27px;
+	border-radius: 10px;
+	text-align: center;
+	position: relative;
+
+	@media screen and (max-width: $small) {
+		width: 90%;
+	}
+
+	&__advice-no {
+		color: hsl(150, 100%, 66%);
+		font-size: 12px;
+	}
+
+	&__quote {
+		margin: 15px 0;
+		font-size: 1.1em;
+	}
+
+	&__separator--desktop {
+		width: 100%;
+	}
+
+	&__dice-container {
+		background-color: hsl(150, 100%, 66%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		border-radius: 100px;
+		width: 2em;
+		height: 2em;
+		bottom: -16px;
+		left: 44.8% ;
+
+		&:hover {
+			box-shadow: 0px 0px 15px 1px hsl(150, 100%, 66%);
+			cursor: pointer;
+		}
+
+		@media screen and (max-width: $small) {
+			width: 2.5em;
+			height: 2.5em;
+			bottom: -18px;
+		}
+			
+	}
+
+	&__dice {
+		width: 0.8em;
+		@media screen and (max-width: $small) {
+			width: 1em;
+		}
+	}
+}
